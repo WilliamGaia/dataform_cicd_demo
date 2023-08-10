@@ -1,0 +1,12 @@
+steps:
+  - name: node
+    entrypoint: sh
+    args:
+    - '-c'
+    - |
+        npm i -g --quiet @dataform/cli@2.4.2 \
+        && sh ./sample_codes/dataform_demo/js_partition_demo/deploy.sh
+logsBucket: 'gs://william_cloudbuild_logs'
+options:
+  logging: GCS_ONLY
+

@@ -1,0 +1,9 @@
+config {
+    type: "view",
+    materialized: true,
+    name: "wildcard_demo_mv",
+    tags: ["monthly_total"],
+    dependencies: ["wildcard_demo_js"]
+}
+
+SELECT * FROM ${ref("wildcard_demo_js")}

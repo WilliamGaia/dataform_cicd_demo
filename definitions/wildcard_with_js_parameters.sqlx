@@ -1,0 +1,18 @@
+config {
+    type: "table",
+    tags: ["monthly_total"],
+    name: "wildcard_demo_js",
+    bigquery: {
+    partitionBy: "DATETIME_TRUNC(insert_time, DAY)",
+    clusterBy: ["name"]
+  },
+  assertions: {
+    rowConditions: [
+      "sum_money >=0"
+    ]
+  }
+}
+
+${wildcard_parameters.get_current_month_sum_table(
+    "williamlab","wildcard_dataset","user_info_2023"
+    )}

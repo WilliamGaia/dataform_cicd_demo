@@ -1,0 +1,7 @@
+{
+    "defaultSchema": "demo_dataform_cicd_dataset",
+    "assertionSchema": "demo_assertion_cicd_dataset",
+    "warehouse": "bigquery",
+    "defaultDatabase": "williamlab",
+    "defaultLocation": "asia-east1"
+}
