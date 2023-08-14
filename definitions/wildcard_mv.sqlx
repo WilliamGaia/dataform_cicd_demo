@@ -1,7 +1,7 @@
 config {
     type: "view",
     materialized: true,
-    name: "wildcard_demo_mv",
+    name: "auto_wildcard_demo_mv",
     tags: ["monthly_total"],
     dependencies: ["wildcard_demo_js"]
 }
